@@ -1,42 +1,324 @@
 <!doctype html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Formlula 1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<header>
-    <header class="p-3 text-bg-dark">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> <a
-                    href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"> <svg
-                        class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg> </a>
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-                </ul>
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search"> <input type="search"
-                        class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-                </form>
-                <div class="text-end"> <button type="button" class="btn btn-outline-light me-2">Login</button> <button
-                        type="button" class="btn btn-warning">Sign-up</button> </div>
+<body lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Formlula 1</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="icon" href="img/F1Logo.ico">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    </head>
+        <body>
+        <header class="p-3 custom-header">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> <a
+                        href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"> <svg
+                            class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                            <use xlink:href="#bootstrap"></use>
+                             <img src="img/F1-Logo.png" alt="logo" id="logo" width="90" height="40">
+                        </svg> </a>
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 fw-semibold">
+                        <li><a href="#" class="nav-link px-2 text-white">Schedule</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Results</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">News</a></li>
+                        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle px-2 text-white" href="#" role="button" data-bs-toggle="dropdown">
+            Drivers
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Lando Norris</a></li>
+            <li><a class="dropdown-item" href="#">Oscar Piastri</a></li>
+            <li><a class="dropdown-item" href="#">Max Verstappen</a></li>
+          </ul>
+        </li>
+                        <li><a href="#" class="nav-link px-2 text-white">Teams</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Fantasy&Gaming</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">F1 Members Area</a></li>
+                    </ul>
+                    <div class="text-end"> <button type="button" class="btn btn-outline-light fw-semibold">Sign In</button> <button
+                            type="button" class="btn btn-warning fw-semibold">Subscribe</button> </div>
+                </div>
+            </div>
+        </header>
+
+
+
+      <!-- <a href="#" class="hero-link">   -->
+  <div class="container col-xxl-8 px-4 py-5 hero-border">
+    <a href="#" class="hero-link"> 
+    <div class="row flex-lg-row-reverse align-items-stretch g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6 hero-image-col">
+        <img src="img/mclaren_auto_7_2a3f8809-05b4-437b-b723-51f073965a6f.webp"
+             class="d-block mx-lg-auto img-fluid hero-img" alt="mclarenf" loading="lazy">
+      </div>
+      <div class="col-lg-6 hero-text">
+        <h1 class="display-5 fw-bold text-white">What Lando Norris needs to become World Champion at Qatar?</h1>
+        <p class="text-white">Where do Oscar Piastri and Max Verstappen need to finish for Lando Norris to secure the championship?</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start hero-button">
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</a>
+<div class="kop">
+  <button type="button" class="kopce fw-bold">
+    <span class="button-text">Standings</span>
+    <span class="button-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+  </button>
+
+  <button type="button" class="kopce fw-bold">
+    <span class="button-text">Latest News</span>
+     <span class="button-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+  </button>
+
+  <button type="button" class="kopce fw-bold">
+    <span class="button-text">Latest Video</span>
+     <span class="button-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+  </button>
+
+  <button type="button" class="kopce fw-bold">
+    <span class="button-text">Live Timing</span>
+     <span class="button-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+        <!-- new example -->
+        <div class="container px-4 py-5" id="featured-3">
+            <h2 class="pb-2 border-bottom">Drivers Championship Race</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <div class="feature col text-center">
+                    <div class="feature-icon d-flex align-items-center justify-content-center driver-icon">
+                        <img src="img/h_full_1501.png" height="50" width="50" alt="lando">
+                    </div>
+
+                    <h3 class="fs-2">Lando Norris 423pts</h3>
+
+                    
+                </div>
+                <div class="feature col text-center">
+                    <div class="feature-icon d-flex align-items-center justify-content-center driver-icon">
+                        <img src="img/supermax.avif" height="50" width="50" alt="lando">
+                    </div>
+
+                    <h3 class="fs-2">Max Verstappen 421pts</h3>
+
+                    
+                </div>
+                <div class="feature col text-center">
+                    <div class="feature-icon d-flex align-items-center justify-content-center driver-icon">
+                        <img src="img/downunder.webp" height="50" width="50" alt="lando">
+                    </div>
+
+                    <h3 class="fs-2">Oscar Piastri 410pts</h3>
+
+                    
+                </div>
+                
             </div>
         </div>
-    </header>
-</header>
 
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
 
-</html>
+   <div class="container py-4">
+
+    <h2 class="fw-bold mb-4">EDITOR'S PICKS</h2>
+
+    <div class="row g-4">
+
+        <!-- BIG FEATURE CARD (Left) -->
+        <div class="col-lg-7">
+            <div class="card-custom card-feature">
+                <img src="img/lando-reaction-hero-2.webp" alt="landohero">
+                <div class="card-feature-text">
+                    <span class="card-tag">Winners & Losers</span><br>
+                    6 Winners and 5 Losers from Abu Dhabi
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT CARD 1 -->
+        <div class="col-lg-5">
+            <div class="card-custom card-wide mb-4">
+                <img src="img/landovitjt.jpg" alt="landoview">
+                <div class="p-3">
+                    <h5 class="mb-0">WATCH: Norris’ first in-depth interview as the new World Champion</h5>
+                </div>
+            </div>
+
+         
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container py-4">
+
+    <div class="row g-4">
+
+        <!-- SMALL CARD 1 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card-custom card-small">
+                <img src="img/GettyImages-2249211512.avif" alt="Leclerc">
+                <div class="p-3">
+                    <h5 class="mb-0">Leclerc hoping Ferrari will ‘get back on top’ in 2026</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- SMALL CARD 2 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card-custom card-small">
+                <img src="img/carlossainz.webp" alt="carlossainz">
+                <div class="p-3">
+                    <h5 class="mb-0">Norris 'doesn't follow stereotype of world champion' – Sainz</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- WIDE CARD 1 -->
+        <div class="col-lg-6">
+            <div class="card-custom card-wide">
+                <img src="img/norrisone.avif" alt="lando">
+                <div class="card-wide-text">
+                    Norris confirms he will use car number 1 next season
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+<section class="partners-wrapper">
+
+<!-- TOP BAND -->
+<div class="partners-band-top">
+    <div class="text-center">
+
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2 class="partners-title">OUR PARTNERS</h2>
+            <a href="#" class="partners-view-all">View all</a>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/lvmh.avif" class="partner-logo" alt="LVMH"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/pirelli.avif" class="partner-logo" alt="Pirelli"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/aramco.avif" class="partner-logo" alt="Aramco"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/logoheinekenoutlinedlight.avif" class="partner-logo" alt="Heineken"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/AWS GLOBAL.avif" class="partner-logo" alt="AWS"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/lenovo.avif" class="partner-logo" alt="Lenovo"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/dhl.avif" class="partner-logo" alt="DHL"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/qatar.avif" class="partner-logo" alt="Qatar Airways"></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- MIDDLE BAND -->
+<div class="partners-band-mid">
+    <div class="text-center">
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/louis vuitton.avif" class="partner-logo" alt="Louis Vuitton"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/TAGH_Shield_Monochrome_White-pw1.avif" class="partner-logo" alt="TAG Heuer"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/moet hennessy.avif" class="partner-logo" alt="Moët Hennessy"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/Amex.avif" class="partner-logo" alt="American Express"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/santander.avif" class="partner-logo" alt="Santander"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/allwyn.avif" class="partner-logo" alt="Allwyn"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/globant.avif" class="partner-logo" alt="Globant"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/las vegas.avif" class="partner-logo" alt="Las Vegas GP"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/Paramount+.avif" class="partner-logo" alt="Paramount+"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/barilla.avif" class="partner-logo" alt="Barilla"></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- BOTTOM BAND -->
+<div class="partners-band-bottom">
+    <div class="text-center">
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/pepsico.avif" class="partner-logo" alt="PepsiCo"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/puma.avif" class="partner-logo" alt="Puma"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/TATA.avif" class="partner-logo" alt="Tata Communications"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/aggreko.avif" class="partner-logo" alt="Aggreko"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/BBS.avif" class="partner-logo" alt="BBS"></div>
+            <div class="col-6 col-sm-4 col-md-2"><img src="img/icons/mcdonalds.avif" class="partner-logo" alt="McDonald's"></div>
+        </div>
+
+    </div>
+</div>
+
+</section>
+
+<footer class="f1-footer text-white pt-5 pb-4">
+    <div class="container text-center">
+
+        
+        <h2 class="fw-bold mb-4">DOWNLOAD THE OFFICIAL F1 APP</h2>
+
+        
+        <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+            <a href="#" class="btn btn-dark px-3 py-2 d-flex align-items-center gap-2 app-btn">
+                <img src="img/icons/apple.svg" height="25">
+                <span>App Store</span>
+            </a>
+            <a href="#" class="btn btn-dark px-3 py-2 d-flex align-items-center gap-2 app-btn">
+                <img src="img/icons/googleplay.svg" height="25">
+                <span>Google Play</span>
+            </a>
+        </div>
+
+        
+        <div class="d-flex justify-content-center gap-4 flex-wrap footer-links mb-3">
+            <a href="#">Schedule</a>
+            <a href="#">Drivers</a>
+            <a href="#">News</a>
+            <a href="#">Teams</a>
+            <a href="#">Fantasy & Gaming</a>
+            <a href="#">Cookie Preferences</a>
+            <a href="#">More</a>
+        </div>
+
+        
+        <div class="redline-container my-4">
+            <div class="redline"></div>
+        </div>
+
+        
+        <div class="d-flex justify-content-center gap-4 social-icons mb-3">
+            <a href="#"><img src="img/icons/facebook.svg" height="22"></a>
+            <a href="#"><img src="img/icons/x.svg" height="22"></a>
+            <a href="#"><img src="img/icons/instagram.svg" height="22"></a>
+            <a href="#"><img src="img/icons/youtube.svg" height="22"></a>
+        </div>
+
+        
+
+       
+        <p class="mt-4 opacity-75">
+            © 2003–2025 Formula One World Championship Limited
+        </p>
+    </div>
+</footer>
+
+       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    </html>
