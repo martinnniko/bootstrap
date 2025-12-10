@@ -1,0 +1,274 @@
+// Variable overrides first
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
+$color-red: #e10600;
+$color-dark-red:#b80a04;
+$color-white: #fff;
+$color-black: #000000;
+$color-lighter-black:#131212;
+$color-background-color:#15151e;
+
+
+    .custom-header {
+    border-bottom: 0.5px solid lightslategray;
+    top: 0;
+    position: sticky;
+    background-color: $color-background-color;
+    z-index: 10;
+
+} 
+.meni{
+    background-color: $color-background-color;
+   
+}
+ .btn-outline-light{
+     background-color: $color-black;
+     border-radius: 15px;
+     border: none;
+     color: $color-white;
+     &:hover{
+        background-color: $color-lighter-black;
+        color: $color-white;
+
+     }
+ }
+.btn-warning{
+    background-color: $color-red;
+    border-radius: 15px;
+    border: none;
+    color: $color-white;
+    &:hover{
+        background-color:$color-dark-red;
+        color: $color-white;
+    }
+}
+.btn-outline-secondary{
+    background-color: $color-lighter-black;
+    color: $color-white;
+    border-radius: 25px;
+    border-color: $color-lighter-black;
+}
+body{
+    background-color: $color-background-color;
+    color: $color-white;
+}
+.footercolor{
+    color: $color-white;
+}
+
+
+.hero-link {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.hero-border {
+    margin-top: 60px;
+    border: 6px solid #111;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.35);
+    background-color: $color-background-color;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-link:hover .hero-border {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.hero-image-col {
+    display: flex;
+    align-items: center;
+}
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+.hero-link:hover .hero-img {
+    transform: scale(1.03);
+}
+
+
+.hero-text {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.kop {
+    margin-top: 60px;
+    background-color: black;
+    padding: 25px 120px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.kopce {
+    display: flex;                  
+    justify-content: space-between;
+    align-items: center;           
+    width: 400px;                   
+    padding: 0 15px;                
+    height: 55px;                    
+    background-color: #c1c4f4;
+    color: black;                   
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.kopce:hover {
+    background-color: #aab0f0;
+}
+
+
+
+.card-custom {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #101018;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.card-custom .p-3{
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.card-custom img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+/* Card heights */
+.card-feature img { height: 680px; }         
+.card-small img   { height: 230px; }          
+.card-wide img    { height: 460px; }          
+
+/* -----------------------------------
+   HOVER EFFECTS
+----------------------------------- */
+
+.card-custom::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    transition: background 0.35s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 30px rgba(255,255,255,0.12);
+}
+
+.card-custom:hover img {
+    transform: scale(1.07);
+}
+
+.card-custom:hover::after {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* -----------------------------------
+   TEXT OVERLAYS
+----------------------------------- */
+
+.card-feature-text,
+.card-wide-text {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(0,0,0,0.9);
+}
+
+.card-feature-text { font-size: 2rem; }
+.card-wide-text    { font-size: 2rem; }
+
+.card-tag {
+    background: #e6007e;
+    padding: 3px 10px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+/* ====== SECTION BACKGROUNDS ====== */
+.partners-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+.partners-band-top {
+    background: #1c1c25; 
+    padding: 60px 0;
+}
+
+.partners-band-mid {
+    background: #303037;  
+    padding: 60px 0;
+}
+
+.partners-band-bottom {
+    background: #47464C; 
+    padding: 60px 0 100px;
+}
+
+/* ====== TITLES & TEXT ====== */
+.partners-title {
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: white;
+    margin-left: 20px;
+}
+
+.partners-view-all {
+    color: #ffffffb5;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.partners-view-all:hover {
+    color: #fff;
+}
+
+/* ====== LOGO STYLES ====== */
+.partner-logo {
+    width: 100%;
+    max-width: 80px;
+    opacity: .8;
+    transition: .2s;
+    filter: brightness(0) invert(1);
+}
+
+.partner-logo:hover {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+// .kopce { display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; background-color: #c1c4f4; color: $color-black; text-transform: uppercase; border: none; border-radius: 10px; font-size: 18px; cursor: pointer; } .kopce:hover { background-color: #aab0f0; } .button-icon { margin-left: 160px; }
+
+
+// .bd-placeholder-img {
+//   height: 400px; /* or whatever size you want */
+//   width: 100%;
+// }
