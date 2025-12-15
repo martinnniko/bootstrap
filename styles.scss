@@ -419,6 +419,9 @@ body {
     background-color: $color-black;
     border-color: $color-white;
     border-radius: 10px;
+    &:hover{
+        background-color: $color-black;
+    }
 }
 
 .formulabold {

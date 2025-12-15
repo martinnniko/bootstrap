@@ -386,6 +386,9 @@ body {
   border-color: #fff;
   border-radius: 10px;
 }
+.getit:hover {
+  background-color: #000000;
+}
 
 .formulabold {
   font-family: "Formula" !important;
