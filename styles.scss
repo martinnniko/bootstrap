@@ -3,57 +3,85 @@ $primary: #900;
 $enable-shadows: true;
 $prefix: "mo-";
 $color-red: #e10600;
-$color-dark-red:#b80a04;
+$color-dark-red: #b80a04;
 $color-white: #fff;
 $color-black: #000000;
-$color-lighter-black:#131212;
-$color-background-color:#15151e;
+$color-lighter-black: #131212;
+$color-background-color: #15151e;
 
 
-    .custom-header {
+@font-face {
+    font-family: "Formula";
+    src: url(../fonts/Formula1-Regular.woff2) format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Formula";
+    src: url(../fonts/Formula1-Bold.woff2) format("woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Formula";
+    src: url(../fonts/Formula1-Wide.woff2) format("woff2");
+    font-weight: 700;
+}
+
+
+
+.custom-header {
     border-bottom: 0.5px solid lightslategray;
     top: 0;
     position: sticky;
     background-color: $color-background-color;
     z-index: 10;
 
-} 
-.meni{
-    background-color: $color-background-color;
-   
 }
- .btn-outline-light{
-     background-color: $color-black;
-     border-radius: 15px;
-     border: none;
-     color: $color-white;
-     &:hover{
+
+.meni {
+    background-color: $color-background-color;
+
+}
+
+.btn-outline-light {
+    background-color: $color-black;
+    border-radius: 15px;
+    border: none;
+    color: $color-white;
+
+    &:hover {
         background-color: $color-lighter-black;
         color: $color-white;
 
-     }
- }
-.btn-warning{
+    }
+}
+
+.btn-warning {
     background-color: $color-red;
     border-radius: 15px;
     border: none;
     color: $color-white;
-    &:hover{
-        background-color:$color-dark-red;
+
+    &:hover {
+        background-color: $color-dark-red;
         color: $color-white;
     }
 }
-.btn-outline-secondary{
+
+.btn-outline-secondary {
     background-color: $color-lighter-black;
     color: $color-white;
     border-radius: 25px;
     border-color: $color-lighter-black;
 }
-body{
+
+body {
     background-color: $color-background-color;
     color: $color-white;
 }
-.footercolor{
+
+.footercolor {
     color: $color-white;
 }
 
@@ -69,20 +97,21 @@ body{
     border: 6px solid #111;
     border-radius: 25px;
     padding: 25px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.35);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
     background-color: $color-background-color;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-link:hover .hero-border {
     transform: scale(1.03);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
 .hero-image-col {
     display: flex;
     align-items: center;
 }
+
 .hero-img {
     width: 100%;
     height: 100%;
@@ -90,6 +119,7 @@ body{
     border-radius: 12px;
     transition: transform 0.3s ease;
 }
+
 .hero-link:hover .hero-img {
     transform: scale(1.03);
 }
@@ -103,7 +133,7 @@ body{
 
 .kop {
     margin-top: 60px;
-    background-color: black;
+    background-color: $color-black;
     padding: 25px 120px;
     display: flex;
     justify-content: space-evenly;
@@ -112,22 +142,115 @@ body{
 }
 
 .kopce {
-    display: flex;                  
+    display: flex;
     justify-content: space-between;
-    align-items: center;           
-    width: 400px;                   
-    padding: 0 15px;                
-    height: 55px;                    
+    align-items: center;
+    width: 400px;
+    padding: 0 15px;
+    height: 55px;
     background-color: #c1c4f4;
-    color: black;                   
+    color: black;
     text-transform: uppercase;
     border: none;
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
 }
+
 .kopce:hover {
     background-color: #aab0f0;
+}
+
+.driver-card {
+    position: relative;
+    height: 320px;
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 25px;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* background */
+.driver-card.first {
+    background: linear-gradient(135deg, #ff7a00, #b94a00);
+    margin-top: -20px;
+}
+
+.driver-card.second {
+    background: linear-gradient(135deg, #003a8f, #001f4d);
+}
+
+.driver-card.third {
+    background: linear-gradient(135deg, #b35a00, #6b2f00);
+    margin-top: 15px;
+}
+
+/* text */
+.driver-info {
+    z-index: 2;
+    max-width: 60%;
+}
+
+.driver-info h3 {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.driver-info p {
+    opacity: 0.85;
+    margin-bottom: 15px;
+}
+
+.position {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.pts {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.pts span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.flag {
+    width: 26px;
+    margin-top: 10px;
+}
+
+
+.driver-img {
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    height: 95%;
+    z-index: 1;
+    transition: transform .3s ease;
+}
+
+.driver-img-max {
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    height: 85%;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+
+.driver-card:hover .driver-img {
+    transform: scale(1.05);
+}
+
+.driver-card:hover .driver-img-max {
+    transform: scale(1.05);
 }
 
 
@@ -143,7 +266,8 @@ body{
     background: #101018;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-.card-custom .p-3{
+
+.card-custom .p-3 {
     flex-grow: 1;
     display: flex;
     align-items: flex-end;
@@ -155,26 +279,32 @@ body{
     transition: transform 0.45s ease;
 }
 
-/* Card heights */
-.card-feature img { height: 680px; }         
-.card-small img   { height: 230px; }          
-.card-wide img    { height: 460px; }          
 
-/* -----------------------------------
-   HOVER EFFECTS
------------------------------------ */
+.card-feature img {
+    height: 680px;
+}
+
+.card-small img {
+    height: 230px;
+}
+
+.card-wide img {
+    height: 460px;
+}
+
+// hover effect
 
 .card-custom::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     transition: background 0.35s ease;
 }
 
 .card-custom:hover {
     transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 0 30px rgba(255,255,255,0.12);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.12);
 }
 
 .card-custom:hover img {
@@ -185,9 +315,7 @@ body{
     background: rgba(0, 0, 0, 0.25);
 }
 
-/* -----------------------------------
-   TEXT OVERLAYS
------------------------------------ */
+// text overlay
 
 .card-feature-text,
 .card-wide-text {
@@ -196,11 +324,16 @@ body{
     left: 25px;
     right: 25px;
     font-weight: 700;
-    text-shadow: 0 0 20px rgba(0,0,0,0.9);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }
 
-.card-feature-text { font-size: 2rem; }
-.card-wide-text    { font-size: 2rem; }
+.card-feature-text {
+    font-size: 2rem;
+}
+
+.card-wide-text {
+    font-size: 2rem;
+}
 
 .card-tag {
     background: #e6007e;
@@ -212,27 +345,35 @@ body{
     display: inline-block;
     margin-bottom: 8px;
 }
-/* ====== SECTION BACKGROUNDS ====== */
+
+// section bg
 .partners-wrapper {
     width: 100%;
     overflow-x: hidden;
 }
+
 .partners-band-top {
-    background: #1c1c25; 
-    padding: 60px 0;
+    background: #1c1c25;
+    padding: 50px 0;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .partners-band-mid {
-    background: #303037;  
-    padding: 60px 0;
+    background: #303037;
+    padding: 30px 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .partners-band-bottom {
-    background: #47464C; 
-    padding: 60px 0 100px;
+    background: #47464C;
+    padding: 60px 0 65px;
+    padding-left: 300px;
+    padding-right: 300px;
 }
 
-/* ====== TITLES & TEXT ====== */
+// title terxt
 .partners-title {
     font-weight: 900;
     letter-spacing: 1px;
@@ -251,7 +392,7 @@ body{
     color: #fff;
 }
 
-/* ====== LOGO STYLES ====== */
+// logo
 .partner-logo {
     width: 100%;
     max-width: 80px;
@@ -263,6 +404,81 @@ body{
 .partner-logo:hover {
     transform: scale(1.08);
     opacity: 1;
+}
+
+.copyrgiht {
+    font-size: 12px;
+}
+
+.futer {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.getit {
+    background-color: $color-black;
+    border-color: $color-white;
+    border-radius: 10px;
+}
+
+.formulabold {
+    font-family: 'Formula' !important;
+    font-weight: 700 !important;
+    font-size: 30px;
+}
+
+.formula {
+    font-family: 'Formula' !important;
+    font-weight: 500 !important;
+}
+
+.acalukas {
+    text-decoration: none;
+    color: $color-white;
+}
+
+.f1-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 30px 0;
+}
+
+.f1-divider-logo {
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.f1-divider-line {
+    flex-grow: 1;
+    height: 6px;
+    background-color: $color-red;
+}
+
+.leftright {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.partners-title {
+    font-family: 'Formula';
+    font-weight: 700;
+    font-size: 25px;
+}
+
+
+
+@media(max-width: 768px) {
+
+    .partners-band-top,
+    .partners-band-mid,
+    .partners-band-bottom,
+    .futer,
+    .leftright {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
 }
 
 // .kopce { display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; background-color: #c1c4f4; color: $color-black; text-transform: uppercase; border: none; border-radius: 10px; font-size: 18px; cursor: pointer; } .kopce:hover { background-color: #aab0f0; } .button-icon { margin-left: 160px; }

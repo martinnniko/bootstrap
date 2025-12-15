@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Formula";
+  src: url(../fonts/Formula1-Regular.woff2) format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Formula";
+  src: url(../fonts/Formula1-Bold.woff2) format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Formula";
+  src: url(../fonts/Formula1-Wide.woff2) format("woff2");
+  font-weight: 700;
+}
 .custom-header {
   border-bottom: 0.5px solid lightslategray;
   top: 0;
@@ -95,7 +110,7 @@ body {
 
 .kop {
   margin-top: 60px;
-  background-color: black;
+  background-color: #000000;
   padding: 25px 120px;
   display: flex;
   justify-content: space-evenly;
@@ -123,6 +138,96 @@ body {
   background-color: #aab0f0;
 }
 
+.driver-card {
+  position: relative;
+  height: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 25px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* background */
+.driver-card.first {
+  background: linear-gradient(135deg, #ff7a00, #b94a00);
+  margin-top: -20px;
+}
+
+.driver-card.second {
+  background: linear-gradient(135deg, #003a8f, #001f4d);
+}
+
+.driver-card.third {
+  background: linear-gradient(135deg, #b35a00, #6b2f00);
+  margin-top: 15px;
+}
+
+/* text */
+.driver-info {
+  z-index: 2;
+  max-width: 60%;
+}
+
+.driver-info h3 {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.driver-info p {
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+.position {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.pts {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.pts span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.flag {
+  width: 26px;
+  margin-top: 10px;
+}
+
+.driver-img {
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  height: 95%;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.driver-img-max {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  height: 85%;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.driver-card:hover .driver-img {
+  transform: scale(1.05);
+}
+
+.driver-card:hover .driver-img-max {
+  transform: scale(1.05);
+}
+
 .card-custom {
   display: flex;
   flex-direction: column;
@@ -148,7 +253,6 @@ body {
   transition: transform 0.45s ease;
 }
 
-/* Card heights */
 .card-feature img {
   height: 680px;
 }
@@ -161,9 +265,6 @@ body {
   height: 460px;
 }
 
-/* -----------------------------------
-   HOVER EFFECTS
------------------------------------ */
 .card-custom::after {
   content: "";
   position: absolute;
@@ -185,9 +286,6 @@ body {
   background: rgba(0, 0, 0, 0.25);
 }
 
-/* -----------------------------------
-   TEXT OVERLAYS
------------------------------------ */
 .card-feature-text,
 .card-wide-text {
   position: absolute;
@@ -217,7 +315,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* ====== SECTION BACKGROUNDS ====== */
 .partners-wrapper {
   width: 100%;
   overflow-x: hidden;
@@ -225,20 +322,25 @@ body {
 
 .partners-band-top {
   background: #1c1c25;
-  padding: 60px 0;
+  padding: 50px 0;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .partners-band-mid {
   background: #303037;
-  padding: 60px 0;
+  padding: 30px 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .partners-band-bottom {
   background: #47464C;
-  padding: 60px 0 100px;
+  padding: 60px 0 65px;
+  padding-left: 300px;
+  padding-right: 300px;
 }
 
-/* ====== TITLES & TEXT ====== */
 .partners-title {
   font-weight: 900;
   letter-spacing: 1px;
@@ -257,7 +359,6 @@ body {
   color: #fff;
 }
 
-/* ====== LOGO STYLES ====== */
 .partner-logo {
   width: 100%;
   max-width: 80px;
@@ -269,4 +370,75 @@ body {
 .partner-logo:hover {
   transform: scale(1.08);
   opacity: 1;
+}
+
+.copyrgiht {
+  font-size: 12px;
+}
+
+.futer {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.getit {
+  background-color: #000000;
+  border-color: #fff;
+  border-radius: 10px;
+}
+
+.formulabold {
+  font-family: "Formula" !important;
+  font-weight: 700 !important;
+  font-size: 30px;
+}
+
+.formula {
+  font-family: "Formula" !important;
+  font-weight: 500 !important;
+}
+
+.acalukas {
+  text-decoration: none;
+  color: #fff;
+}
+
+.f1-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.f1-divider-logo {
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.f1-divider-line {
+  flex-grow: 1;
+  height: 6px;
+  background-color: #e10600;
+}
+
+.leftright {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.partners-title {
+  font-family: "Formula";
+  font-weight: 700;
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .partners-band-top,
+  .partners-band-mid,
+  .partners-band-bottom,
+  .futer,
+  .leftright {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }/*# sourceMappingURL=styles.css.map */
